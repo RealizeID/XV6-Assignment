@@ -38,9 +38,9 @@ main(int argc, char *argv[])
   r.hour %= 12;
   if (r.hour == 0) r.hour = 12;
 
-  printf(1, "%s %s%d %s %d %s%d:%s%d:%s%d %s UTC\n", days[day], PAD(r.day), r.day,
-      months[r.month], r.year, PAD(r.hour), r.hour, PAD(r.minute), r.minute,
-      PAD(r.second), r.second, s);
+  printf(1, "%s %s  %d %s%d:%s%d:%s%d %s UTC %d\n", days[day], months[r.month],
+      r.day, PAD(r.hour), r.hour, PAD(r.minute), r.minute, 
+      PAD(r.second), r.second, s, r.year);
 
   exit();
 }

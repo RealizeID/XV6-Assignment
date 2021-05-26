@@ -25,6 +25,19 @@ char* sbrk(int);
 int sleep(int);
 int uptime(void);
 int halt(void);
+#ifdef CS333_P1 
+int date(struct rtcdate*);
+#endif
+
+#ifdef CS333_P2
+uint getuid(void); // UID of the current process
+uint getgid(void); // GID of the current process
+uint getppid(void); // PID of the parent process
+
+int setuid(uint); // Set uid
+int setgid(uint); // set gid
+int  getprocs(uint, struct uproc*);
+#endif
 
 // ulib.c
 int stat(char*, struct stat*);
@@ -44,6 +57,3 @@ int atoo(const char*);
 int strncmp(const char*, const char*, uint);
 #endif // PDX_XV6
 
-#ifdef CS333_P1
-int date(struct rtcdate*);
-#endif //CS333_P1
