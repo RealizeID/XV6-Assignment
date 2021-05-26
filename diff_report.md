@@ -1,4 +1,4 @@
-# Task 1: UID`s and GID`s and PPID`s
+# Task 1: UID and GID and PPID
 
 ## Makefile
 ```diff
